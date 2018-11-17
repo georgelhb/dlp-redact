@@ -11,21 +11,7 @@ import os
 # [START dlp_redact_image]
 def redact_image(project, filename, output_filename,
                  info_types, min_likelihood=None, mime_type=None):
-    """Uses the Data Loss Prevention API to redact protected data in an image.
-    Args:
-        project: The Google Cloud project id to use as a parent resource.
-        filename: The path to the file to inspect.
-        output_filename: The path to which the redacted image will be written.
-        info_types: A list of strings representing info types to look for.
-            A full list of info type categories can be fetched from the API.
-        min_likelihood: A string representing the minimum likelihood threshold
-            that constitutes a match. One of: 'LIKELIHOOD_UNSPECIFIED',
-            'VERY_UNLIKELY', 'UNLIKELY', 'POSSIBLE', 'LIKELY', 'VERY_LIKELY'.
-        mime_type: The MIME type of the file. If not specified, the type is
-            inferred via the Python standard library's mimetypes module.
-    Returns:
-        None; the response from the API is printed to the terminal.
-    """
+  
     # Import the client library
     import google.cloud.dlp
 
